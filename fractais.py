@@ -36,7 +36,8 @@ def kochplt():
 
 #Samambaia de Barnsley
 def barnsley(x,y,z):
-    for i in range(0, 50000): 
+    for i in range(0, 50000):
+        z = randint(1, 100) 
         if z == 1: 
             x.append(0) 
             y.append(0.16*(y[i])) 
@@ -48,7 +49,11 @@ def barnsley(x,y,z):
             y.append(0.23*(x[i]) + 0.22*(y[i])+1.6) 
         if z>= 94 and z<= 100: 
             x.append(-0.15*(x[i]) + 0.28*(y[i])) 
-            y.append(0.26*(x[i]) + 0.24*(y[i])+0.44) 
+            y.append(0.26*(x[i]) + 0.24*(y[i])+0.44)
+    plt.scatter(x, y, s = 0.2, c ='#5dbb63') 
+    plt.axis("off")
+    plt.savefig('barnsley_fern.png', dpi=300, bbox_inches='tight')
+    plt.show()
 #end
 
 #Conjunto de Mandelbrot
@@ -87,7 +92,6 @@ kochplt()
 '''
 x = [0]
 y = [0]
-z = randint(1, 100) 
 barnsley(x,y)
 '''
 #Para executar o Conjunto de Mandelbrot, tire os comentários em bloco
