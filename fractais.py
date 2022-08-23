@@ -35,7 +35,7 @@ def kochplt():
 #end
 
 #Samambaia de Barnsley
-def barnsley(x,y,z):
+def barnsley(x,y):
     for i in range(0, 50000):
         z = randint(1, 100) 
         if z == 1: 
